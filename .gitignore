@@ -1,0 +1,19 @@
+#temp sound bite shouldn't be stored
+/sounds/temptalk.mp3
+
+#for Webstorm
+.idea
+
+#in case of errors
+npm-debug.log
+
+#prevent api keys from leaking
+.env
+
+#for the self ping
+/temp/*
+
+/data/fighting_phrases.json
+node_modules/
+
+data.json
