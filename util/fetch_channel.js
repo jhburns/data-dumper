@@ -52,7 +52,9 @@ function getAllMessages(channel, name, global_store) {
     loop(null).then(function() {
         logger.info(`All of ${ name } channel's messages loaded in: ${ process.uptime() } sec`);
 
-        fs.writeFileSync('./data.json', global_store);
+        fs.writeFileSync('./data.json', JSON.stringify(global_store, null, 2));
+
+        process.exit();
     }).catch(function (err) {
         logger.error(err);
     });
